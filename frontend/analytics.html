@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics | HealthPredict</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                HealthPredict
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="predict.html">
+                    Predict
+                </a>
+
+                <a href="analytics.html" class="active">
+                    Analytics
+                </a>
+
+                <a href="about.html">
+                    About
+                </a>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- Analytics Section -->
+
+    <section class="analytics-section">
+
+
+        <div class="section-header">
+
+            <h1>
+                Model Analytics
+            </h1>
+
+            <p>
+                Overview of the dataset, machine learning model
+                and prediction performance.
+            </p>
+
+        </div>
+
+
+
+        <!-- Statistics Cards -->
+
+        <div class="analytics-grid">
+
+
+            <div class="analytics-card">
+
+                <h3>
+                    Dataset Records
+                </h3>
+
+                <div class="analytics-number">
+                    101,766
+                </div>
+
+                <p>
+                    Patient records used from the UCI diabetes dataset.
+                </p>
+
+            </div>
+
+
+
+            <div class="analytics-card">
+
+                <h3>
+                    Input Features
+                </h3>
+
+                <div class="analytics-number">
+                    17
+                </div>
+
+                <p>
+                    Patient demographic, admission and treatment features.
+                </p>
+
+            </div>
+
+
+
+            <div class="analytics-card">
+
+                <h3>
+                    Machine Learning Model
+                </h3>
+
+                <div class="analytics-number">
+                    Random Forest
+                </div>
+
+                <p>
+                    Classification model used for prediction.
+                </p>
+
+            </div>
+
+
+
+            <div class="analytics-card">
+
+                <h3>
+                    Target
+                </h3>
+
+                <div class="analytics-number">
+                    Readmission
+                </div>
+
+                <p>
+                    Predicts whether readmission occurs within 30 days.
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Model Performance -->
+
+        <div class="analytics-panel">
+
+            <h2>
+                Model Performance
+            </h2>
+
+
+            <div class="metrics-grid">
+
+
+                <div class="metric">
+
+                    <span>
+                        Accuracy
+                    </span>
+
+                    <strong>
+                        87.42%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="metric">
+
+                    <span>
+                        Precision
+                    </span>
+
+                    <strong>
+                        26.66%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="metric">
+
+                    <span>
+                        Recall
+                    </span>
+
+                    <strong>
+                        7.27%
+                    </strong>
+
+                </div>
+
+
+
+                <div class="metric">
+
+                    <span>
+                        F1 Score
+                    </span>
+
+                    <strong>
+                        11.42%
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Target Distribution -->
+
+        <div class="analytics-panel">
+
+            <h2>
+                Target Distribution
+            </h2>
+
+
+            <div class="distribution-container">
+
+
+                <div class="distribution-item">
+
+                    <div class="distribution-label">
+
+                        <span>
+                            Not Readmitted within 30 Days
+                        </span>
+
+                        <strong>
+                            88.84%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="distribution-bar">
+
+                        <div
+                            class="distribution-fill"
+                            style="width: 88.84%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="distribution-item">
+
+                    <div class="distribution-label">
+
+                        <span>
+                            Readmitted within 30 Days
+                        </span>
+
+                        <strong>
+                            11.16%
+                        </strong>
+
+                    </div>
+
+
+                    <div class="distribution-bar">
+
+                        <div
+                            class="distribution-fill"
+                            style="width: 11.16%;">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Explanation -->
+
+        <div class="analytics-panel">
+
+            <h2>
+                About the Prediction Model
+            </h2>
+
+
+            <p>
+
+                HealthPredict uses a Random Forest classification
+                model trained on patient demographic, admission,
+                treatment and medical-history related features.
+
+            </p>
+
+
+            <p>
+
+                The target variable is based on the patient's
+                readmission status. A value representing readmission
+                within 30 days is treated as the positive class.
+
+            </p>
+
+
+            <p>
+
+                The model output provides a predicted outcome and
+                an estimated probability of readmission.
+
+            </p>
+
+        </div>
+
+
+    </section>
+
+
+
+    <!-- Footer -->
+
+    <footer class="footer">
+
+        <p>
+            HealthPredict | Patient Health Outcome Predictor
+        </p>
+
+        <p>
+            For educational and analytical purposes only.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

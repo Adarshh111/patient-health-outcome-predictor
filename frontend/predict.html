@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Patient Prediction | HealthPredict</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+
+            <a href="index.html" class="logo">
+                HealthPredict
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="predict.html" class="active">Predict</a>
+                <a href="analytics.html">Analytics</a>
+                <a href="about.html">About</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- Prediction Section -->
+    <section class="prediction-section">
+
+        <div class="section-header">
+
+            <h1>Patient Health Outcome Prediction</h1>
+
+            <p>
+                Enter patient information to generate a model-based
+                prediction of readmission within 30 days.
+            </p>
+
+        </div>
+
+
+        <!-- Prediction Form -->
+        <div class="prediction-card">
+
+            <form id="predictionForm">
+
+                <!-- Patient Information -->
+                <h2>Patient Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="race">Race</label>
+
+                        <select id="race" required>
+                            <option value="Caucasian">Caucasian</option>
+                            <option value="AfricanAmerican">African American</option>
+                            <option value="Asian">Asian</option>
+                            <option value="Hispanic">Hispanic</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="gender">Gender</label>
+
+                        <select id="gender" required>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="age">Age Group</label>
+
+                        <select id="age" required>
+                            <option value="[0-10)">0-10</option>
+                            <option value="[10-20)">10-20</option>
+                            <option value="[20-30)">20-30</option>
+                            <option value="[30-40)">30-40</option>
+                            <option value="[40-50)">40-50</option>
+                            <option value="[50-60)">50-60</option>
+                            <option value="[60-70)" selected>60-70</option>
+                            <option value="[70-80)">70-80</option>
+                            <option value="[80-90)">80-90</option>
+                            <option value="[90-100)">90-100</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="admission_type_id">
+                            Admission Type ID
+                        </label>
+
+                        <input
+                            type="number"
+                            id="admission_type_id"
+                            value="1"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="admission_source_id">
+                            Admission Source ID
+                        </label>
+
+                        <input
+                            type="number"
+                            id="admission_source_id"
+                            value="7"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="time_in_hospital">
+                            Time in Hospital (days)
+                        </label>
+
+                        <input
+                            type="number"
+                            id="time_in_hospital"
+                            value="5"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="num_lab_procedures">
+                            Lab Procedures
+                        </label>
+
+                        <input
+                            type="number"
+                            id="num_lab_procedures"
+                            value="40"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="num_procedures">
+                            Procedures
+                        </label>
+
+                        <input
+                            type="number"
+                            id="num_procedures"
+                            value="1"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="num_medications">
+                            Number of Medications
+                        </label>
+
+                        <input
+                            type="number"
+                            id="num_medications"
+                            value="15"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="number_outpatient">
+                            Outpatient Visits
+                        </label>
+
+                        <input
+                            type="number"
+                            id="number_outpatient"
+                            value="0"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="number_emergency">
+                            Emergency Visits
+                        </label>
+
+                        <input
+                            type="number"
+                            id="number_emergency"
+                            value="0"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="number_inpatient">
+                            Previous Inpatient Visits
+                        </label>
+
+                        <input
+                            type="number"
+                            id="number_inpatient"
+                            value="0"
+                            min="0"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="number_diagnoses">
+                            Number of Diagnoses
+                        </label>
+
+                        <input
+                            type="number"
+                            id="number_diagnoses"
+                            value="8"
+                            min="1"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="A1Cresult">
+                            A1C Result
+                        </label>
+
+                        <select id="A1Cresult" required>
+                            <option value="Norm">Normal</option>
+                            <option value=">7">&gt;7</option>
+                            <option value=">8">&gt;8</option>
+                            <option value="None">Not measured</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="insulin">Insulin</label>
+
+                        <select id="insulin" required>
+                            <option value="No">No</option>
+                            <option value="Up">Up</option>
+                            <option value="Down">Down</option>
+                            <option value="Steady">Steady</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="change">
+                            Medication Change
+                        </label>
+
+                        <select id="change" required>
+                            <option value="Ch">Changed</option>
+                            <option value="No">No Change</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="diabetesMed">
+                            Diabetes Medication
+                        </label>
+
+                        <select id="diabetesMed" required>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                    </div>
+
+                </div>
+
+
+                <!-- Submit -->
+                <button type="submit" class="predict-button">
+                    Predict Patient Outcome
+                </button>
+
+            </form>
+
+
+            <!-- Result -->
+<div id="predictionResult" class="prediction-result">
+
+    <h2>Prediction Result</h2>
+
+    <p id="resultText">
+        Submit the form to generate a prediction.
+    </p>
+
+    <p id="probabilityText"></p>
+
+    <div class="probability-bar-container">
+        <div id="probabilityBar" class="probability-bar"></div>
+    </div>
+
+</div>
+
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+
+        <p>
+            HealthPredict | Patient Health Outcome Predictor
+        </p>
+
+        <p>
+            For educational and analytical purposes only.
+        </p>
+
+    </footer>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
