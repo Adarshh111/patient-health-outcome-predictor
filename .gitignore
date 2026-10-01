@@ -22,3 +22,5 @@ dataset/*.csv
 # OS files
 .DS_Store
 Thumbs.db
+# Large trained model
+model/patient_outcome_model.pkl
