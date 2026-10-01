@@ -6,8 +6,7 @@ import pandas as pd
 
 # Project paths
 BASE_DIR = Path(__file__).resolve().parent.parent
-MODEL_PATH = BASE_DIR / "model" / "patient_outcome_model.pkl"
-
+MODEL_PATH = BASE_DIR / "model" / "patient_outcome_model_compressed.pkl"
 # Flask application
 app = Flask(__name__)
 CORS(app)
