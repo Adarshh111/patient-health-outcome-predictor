@@ -1,7 +1,9 @@
 Flask
+flask-cors
 pandas
 numpy
 scikit-learn
 plotly
 joblib
 gunicorn
+flask-cors
