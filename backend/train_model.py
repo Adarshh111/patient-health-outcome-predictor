@@ -171,7 +171,7 @@ preprocessor = ColumnTransformer(
 # --------------------------------------------------
 
 model = RandomForestClassifier(
-    n_estimators=100,
+    n_estimators=30,
     random_state=42,
     class_weight="balanced",
     n_jobs=-1

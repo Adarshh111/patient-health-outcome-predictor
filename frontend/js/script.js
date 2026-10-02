@@ -1,4 +1,5 @@
 const predictionForm = document.getElementById("predictionForm");
+const API_BASE_URL = "https://patient-health-outcome-predictor.onrender.com";
 
 if (predictionForm) {
 
@@ -77,7 +78,7 @@ if (predictionForm) {
         try {
 
             const response = await fetch(
-                "http://127.0.0.1:5000/predict",
+                `${API_BASE_URL}/predict`,
                 {
                     method: "POST",
 
